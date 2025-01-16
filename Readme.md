@@ -35,26 +35,27 @@ Install all dependencies via the provided `requirements.txt`.
 ```bash
 git clone https://github.com/vasileios27/fastapi-yolo-object-detection.git
 cd fastapi-yolo-object-detection
+```
 
 ### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 ### 3. Run the Application
 Start the server using uvicorn:
 ```bash
 uvicorn app.main:app --reload
+```
 
 ### 4. Test the API
 Access the root endpoint at http://127.0.0.1:8000/ to verify the server is running.
 Use the /detect/ endpoint to perform object detection.
 Example Request
 Using curl:
-
-bash
-Copy
-Edit
+```bash
 curl -X POST "http://127.0.0.1:8000/detect/" \
      -H "accept: application/json" \
      -H "Content-Type: multipart/form-data" \
      -F "file=@path_to_image.jpg"
+```
